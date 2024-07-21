@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024 dddd</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .header {
+            background: #dc0909;
+            color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            margin-left: 1rem;
+            position: relative;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem;
+            display: block;
+        }
+
+        .nav-link:hover {
+            background: #d7f20d;
+            color: #dc0909;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: #dc0909;
+            text-decoration: none;
+        }
+
+        .dropdown-menu a:hover {
+            background: #d7f20d;
+        }
+
+        .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+
+        .hero {
+            background: linear-gradient(90deg, #dc0909, #d7f20d);
+            color: #fff;
+            text-align: center;
+            padding: 4rem 0;
+            margin-top: 5rem;
+        }
+
+        .hero .btn {
+            background: #fff;
+            color: #dc0909;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .shop-options {
+            display: none;
+            margin-top: 1rem;
+        }
+
+        .shop-options .btn {
+            margin: 0.5rem;
+        }
+
+        .products {
+            padding: 2rem 0;
+        }
+
+        .product-grid {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .product-item {
+            background: #f4f4f4;
+            padding: 1rem;
+            flex: 1 1 calc(33.333% - 1rem);
+            box-sizing: border-box;
+        }
+
+        .product-item img {
+            max-width: 100%;
+        }
+
+        .product-item h3 {
+            margin: 0.5rem 0;
+        }
+
+        .product-item .btn {
+            background: #dc0909;
+            color: #fff;
+            border: none;
+            padding: 0.5rem;
+            margin: 0.100rem 0;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .about, .contact {
+            padding: 2rem 0;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact form input, .contact form textarea {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        .footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        .social-icons {
+            margin-bottom: 1rem;
+        }
+
+        .rounded-icon {
+            border-radius: 50%;
+            margin: 0 0.5rem;
+        }
+
+        .cart {
+            display: none;
+            padding: 2rem 0;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f4f4f4;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">dddddd</div>
+                <ul class="nav-menu">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Categories</a>
+                        <div class="dropdown-menu">
+                            <a href="#">Category 1</a>
+                            <a href="#">Category 2</a>
+                            <a href="#">Category 3</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#Alert" class="nav-link">Alert</a></li>
+                    <li class="nav-item"><a href="#about " class="nav-link">About Us </a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>
+                    <li class="nav-item"><a href="file:///C:\Users\LENOVO\Desktop\index\e.html" class="nav-link">Admin login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>ddddd ddddd  dddddd</h1>
+            <p>DDddd  ddddd  dd dddd dddddd</p>
+            <button class="btn" id="shop-now-btn">Shop Now</button>
+            <div id="shop-options" class="shop-options">
+                <button class="btn" onclick="scrollToSection('feature-products')">Feature Product</button>
+                <button class="btn" onclick="scrollToSection('trending-products')">Trending Product</button>
+                <button class="btn" onclick="scrollToSection('new-products')">New Product</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <section class="products" id="feature-products">
+            <div class="container">
+                <h2>Feature Products</h2>
+                <input type="text" id="search-bar-feature" placeholder="Search products..." oninput="searchProducts('feature')">
+                <div class="product-grid" id="product-grid-feature">
+                    <!-- Product Items will be added here -->
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Desktop\index\index\9874652317f.png" alt="Product Image">
+			<img src="C:\Users\LENOVO\Desktop\index\index\9874652317f.png" alt="Product Image">
+                        <h3>l</h3>
+                        <p>000₹/ piece</p>
+                        <button class="btn">Not Available</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="https://www.google.com/imgres?q=google%20photos&imgurl=https%3A%2F%2Fwww.cnet.com%2Fa%2Fimg%2Fhub%2F2013%2F12%2F30%2F304e2ff0-8533-11e3-bc97-14feb5ca9861%2FGoogle-Photos-icon-logo.png&imgrefurl=https%3A%2F%2Fwww.cnet.com%2Ftech%2Fcomputing%2Fgoogle-heres-what-were-actually-doing-with-google-plus-photos%2F&docid=p0kmfhIhWG7KeM&tbnid=LrTr2hJb1CcCEM&vet=12ahUKEwiN1NH69LeHAxX1h68BHYY2IbwQM3oECHEQAA..i&w=1566&h=1184&hcb=2&ved=2ahUKEwiN1NH69LeHAxX1h68BHYY2IbwQM3oECHEQAA" alt="Product Image">
+			<img src="https://www.google.com/imgres?q=google%20photos&imgurl=https%3A%2F%2Fwww.cnet.com%2Fa%2Fimg%2Fhub%2F2013%2F12%2F30%2F304e2ff0-8533-11e3-bc97-14feb5ca9861%2FGoogle-Photos-icon-logo.png&imgrefurl=https%3A%2F%2Fwww.cnet.com%2Ftech%2Fcomputing%2Fgoogle-heres-what-were-actually-doing-with-google-plus-photos%2F&docid=p0kmfhIhWG7KeM&tbnid=LrTr2hJb1CcCEM&vet=12ahUKEwiN1NH69LeHAxX1h68BHYY2IbwQM3oECHEQAA..i&w=1566&h=1184&hcb=2&ved=2ahUKEwiN1NH69LeHAxX1h68BHYY2IbwQM3oECHEQAA" alt="Product Image">
+                        <h3>k</h3>
+                        <p>000₹/ piece</p>
+                        <button class="btn">Not Available</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Desktop\index\index\9874652317f.png" alt="Product Image">
+			<img src="C:\Users\LENOVO\Desktop\index\index\9874652317f.png" alt="Product Image">
+                        <h3>j</h3>
+                        <p>000₹/ piece</p>
+                        <button class="btn">Not Available</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Desktop\index\index\9874652317f.png" alt="Product Image">
+			<img src="C:\Users\LENOVO\Desktop\index\index\9874652317f.png" alt="Product Image">
+                        <h3>i</h3>
+                        <p>000₹/ piece</p>
+                        <button class="btn">Not Available</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Desktop\index\index\9874652317f.png" alt="Product Image">
+			<img src="C:\Users\LENOVO\Desktop\index\index\9874652317f.png" alt="Product Image">
+                        <h3>h</h3>
+                        <p>000₹/ piece</p>
+                        <button class="btn">Not Available</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Desktop\index\index\9874652317f.png" alt="Product Image">
+			<img src="C:\Users\LENOVO\Desktop\index\index\9874652317f.png" alt="Product Image">
+                        <h3>g</h3>
+                        <p>000₹/ piece</p>
+                        <button class="btn">Not Available</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products" id="trending-products">
+            <div class="container">
+                <h2>Trending Products</h2>
+                <input type="text" id="search-bar-trending" placeholder="Search products..." oninput="searchProducts('trending')">
+                <div class="product-grid" id="product-grid-trending">
+                    <!-- Product Items will be added here -->
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Desktop\New folder (4)\9874652317f.png" alt="Product Image">
+			<img src="C:\Users\LENOVO\Desktop\New folder (4)\9874652317f.png" alt="Product Image">
+                        <h3>f</h3>
+                        <p>00₹/piece</p>
+                        <button class="btn">Not Available</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Desktop\New folder (4)\9874652317f.png" alt="Product Image">
+			<img src="C:\Users\LENOVO\Desktop\New folder (4)\9874652317f.png" alt="Product Image">
+                        <h3>e</h3>
+                        <p>00₹/piece</p>
+                        <button class="btn">Not Available</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Desktop\New folder (4)\9874652317f.png" alt="Product Image">
+			<img src="C:\Users\LENOVO\Desktop\New folder (4)\9874652317f.png" alt="Product Image">
+                        <h3>d</h3>
+                        <p>00₹/piece</p>
+                        <button class="btn">Not Available</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products" id="new-products">
+            <div class="container">
+                <h2>New Products</h2>
+                <input type="text" id="search-bar-new" placeholder="Search products..." oninput="searchProducts('new')">
+                <div class="product-grid" id="product-grid-new">
+                    <!-- Product Items will be added here -->
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Desktop\New folder (4)\9874652317f.png" alt="Product Image">
+			<img src="C:\Users\LENOVO\Desktop\New folder (4)\9874652317f.png" alt="Product Image">
+                        <h3>c</h3>
+                        <p>00₹/piece</p>
+                        <button class="btn">Not Available</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Desktop\New folder (4)\9874652317f.png" alt="Product Image">
+			<img src="C:\Users\LENOVO\Desktop\New folder (4)\9874652317f.png" alt="Product Image">
+                        <h3>b</h3>
+                        <p>00₹/piece</p>
+                        <button class="btn">Not Available</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Desktop\New folder (4)\9874652317f.png" alt="Product Image">
+			<img src="C:\Users\LENOVO\Desktop\New folder (4)\9874652317f.png" alt="Product Image">
+                        <h3>a</h3>
+                        <p>00₹/piece</p>
+                        <button class="btn">Not Available</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Alert" id="Alert">
+            <div class="container">
+                <h2>Alert </h2>
+                <p>..............................................................................................Coming soon.............................................................................................................</p>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>....................................................................................................Coming soon..................................................................................................................</p>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>AAAAAAAAAAAAA</p>
+                <p>AAAAAAAAAAAAAAAAA</p>
+                <p>AAAAAAAAAAAAAA</p>
+                <h3>AAAAAAAAAAAA</h3>
+                <h3>AAAAAAAAAAAAA</h3>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 dddd. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("shop-now-btn").addEventListener("click", function() {
+            var shopOptions = document.getElementById("shop-options");
+            if (shopOptions.style.display === "block") {
+                shopOptions.style.display = "none";
+            } else {
+                shopOptions.style.display = "block";
+            }
+        });
+
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function searchProducts(category) {
+            var inputId = 'search-bar-' + category;
+            var searchTerm = document.getElementById(inputId).value.toLowerCase();
+            var productGridId = 'product-grid-' + category;
+            var productGrid = document.getElementById(productGridId);
+            var products = productGrid.getElementsByClassName('product-item');
+
+            for (var i = 0; i < products.length; i++) {
+                var product = products[i];
+                var productName = product.getElementsByTagName('h3')[0].textContent.toLowerCase();
+                if (productName.includes(searchTerm)) {
+                    product.style.display = '';
+                } else {
+                    product.style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
